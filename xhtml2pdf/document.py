@@ -118,6 +118,8 @@ def pisaDocument(src, dest=None, path=None, link_callback=None, debug=0,
                       topPadding=0)],
             pagesize = context.pageSize)
 
+    body.autoNextPageTemplate = 1
+
     doc.addPageTemplates([body] + context.templateList.values())
 
     # Use multibuild e.g. if a TOC has to be created
